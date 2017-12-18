@@ -1,0 +1,13 @@
+<form method="POST" action="#" role="form">
+
+  <input placeholder="Name" id="signupName" type="text" [(ngModel)]="registrationUser.name" [ngModelOptions]="{standalone: true}">
+
+  <input placeholder="Email" id="signupEmail" type="email" [(ngModel)]="registrationUser.email" [ngModelOptions]="{standalone: true}">
+
+  <input placeholder="Password" id="signupPassword" type="password" length="40" [(ngModel)]="registrationUser.password" [ngModelOptions]="{standalone: true}">
+
+  <button (click)="onRegister()" id="signupSubmit" type="submit">
+    Create your account
+  </button>
+
+</form>

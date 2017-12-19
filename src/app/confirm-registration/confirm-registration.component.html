@@ -1,0 +1,9 @@
+<form method="POST" action="#" role="form">
+  
+  <input placeholder="Email" id="email" type="email" maxlength="50" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+
+  <input placeholder="Confirmation Code" id="confirmationCode" type="text" maxlength="50" [(ngModel)]="confirmationCode" [ngModelOptions]="{standalone: true}">
+
+  <button (click)="onConfirmRegistration()" id="confirmRegistration" type="submit">Confirm</button>
+  
+</form>

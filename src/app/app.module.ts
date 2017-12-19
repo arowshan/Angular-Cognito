@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { CognitoUtil } from './register/cognito.service';
+import { ConfirmRegistrationComponent } from './confirm-registration/confirm-registration.component';
+import { RegisterService } from './register/register.service';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent],
+  declarations: [AppComponent, RegisterComponent, ConfirmRegistrationComponent],
   imports: [BrowserModule, FormsModule],
-  providers: [CognitoUtil],
+  providers: [CognitoUtil, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

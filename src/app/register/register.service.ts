@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { CognitoUtil } from './cognito.service';
 import { RegistrationUser } from './register.component';
-import { CognitoUserAttribute } from 'amazon-cognito-identity-js';
+import { CognitoUserAttribute, CognitoUser } from 'amazon-cognito-identity-js';
 
 @Injectable()
 export class RegisterService {
@@ -34,4 +34,24 @@ export class RegisterService {
         // }
       });
   }
+
+
+  confirmRegistration(username: string, confirmationCode: string): void {
+      let userData = {
+          Username: username,
+          Pool: this.cognitoUtil.getUserPool()
+      };
+
+      let cognitoUser = new CognitoUser(userData);
+
+      cognitoUser.confirmRegistration(confirmationCode, true, function (err, result) {
+          // if (err) {
+          //     callback.cognitoCallback(err.message, null);
+          // } else {
+          //     callback.cognitoCallback(null, result);
+          // }
+      });
+  }
+
+
 }

@@ -1,0 +1,9 @@
+<form method="POST" action="#" role="form">
+
+  <input placeholder="Email" id="loginEmail" type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+
+  <input placeholder="Password" id="loginPassword" type="password" length="40" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+
+  <button (click)="onLogin()" id="loginSubmit" type="submit">Login</button>
+
+</form>

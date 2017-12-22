@@ -60,4 +60,8 @@ export class LoginService {
     });
   }
 
+  logout() {
+    this.cognitoUtil.getCurrentUser().signOut();
+  }
+
 }

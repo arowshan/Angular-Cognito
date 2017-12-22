@@ -19,4 +19,8 @@ export class LoginComponent implements OnInit {
     this.loginService.authenticate(this.email, this.password);
   }
 
+  onLogout() {
+    this.loginService.logout();
+  }
+
 }
